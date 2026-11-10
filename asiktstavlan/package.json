@@ -1,0 +1,13 @@
+{
+  "name": "asiktstavlan",
+  "version": "1.0.0",
+  "description": "Anonym åsiktstavla med moderering, likes och 30 dagars livslängd",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --no-warnings server.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}

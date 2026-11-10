@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Moderering – Åsiktstavlan</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin">
+  <header class="top">
+    <a class="brand" href="/"><span class="dot"></span>Åsiktstavlan</a>
+    <button class="btn ghost" id="logout" hidden>Logga ut</button>
+  </header>
+  <main>
+    <h1>Moderering</h1>
+
+    <form id="login" class="login">
+      <input id="pw" type="password" placeholder="Adminlösenord" aria-label="Adminlösenord" autocomplete="current-password">
+      <button class="btn" type="submit">Logga in</button>
+    </form>
+    <p class="status err" id="err"></p>
+
+    <section id="panel" hidden>
+      <div class="tabs">
+        <button class="sort active" data-s="pending">Att granska <span id="n-pending"></span></button>
+        <button class="sort" data-s="approved">Publicerade <span id="n-approved"></span></button>
+        <button class="sort" data-s="rejected">Avvisade <span id="n-rejected"></span></button>
+      </div>
+      <div id="list"></div>
+      <p class="empty" id="none" hidden>Inget här just nu 🎉</p>
+    </section>
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>
